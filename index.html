@@ -30,12 +30,47 @@
       
       <p>biicode manages your project’s dependencies so you can use the libs you need (Curl, Catch, Fann, OpenSSL, OpenCV, Poco, Boost, Libuv, GTest ...) as you wish within your project. Biicode uses CMake to configure and build your projects and it is compatible with many IDEs and version control systems.</p>
 
+      
+      <h2>Install biicode</h2>
+
+      <p>We have <a href="https://www.biicode.com/downloads">precompiled binaries for most platforms</a>, but you can run biicode from sources if you like.
+      Just follow this steps:</p>
+
+
+      <ol type="1">
+        <li>Clone <code><a href="https://github.com/biicode/biicode">biicode/biicode</a></code> repo:</li>
+        <pre><code>$ git clone https://github.com/biicode/biicode.git</code></pre>
+        <li>Initialize its submodules:</li>
+        <pre><code>$ git submodule update --init --recursive</code></pre>
+        <li>Install biicode dependencies with <code><a href="https://pypi.python.org/pypi/pip">pip</a></code>:</li>
+        <pre><code>$ pip install -r client/requirements.txt
+$ pip install -r common/requirements.txt</code></pre>
+        <li>biicode entry point is <code><a href="https://github.com/biicode/client/blob/develop/shell/bii.py">biicode.client.shell.bii</a></code> module.
+        You can write your own python script, named "bii", which calls <code>bii.main</code> function:</li>
+        <pre><code>#!/usr/bin/env python
+
+import sys, os
+sys.path.append(sys.path.join("path to biicode repo", "../"))
+from biicode.client.shell.bii import main
+main(sys.argv[1:])</code></pre>
+
+Then add that <code>bii</code> file to your <code>PATH</code> and you are ready:
+<pre><code>$ bii --help
+SYNOPSIS:
+    $ bii COMMAND [options]
+For help about a command:
+    $ bii COMMAND --help
+To change verbosity, use options --quiet --verbose
+...</code></pre>
+      </ol>
+
+      <h2>Join us!</h2>
+
+      <p><a href="https://www.biicode.com/accounts/signup">Create your own biicode account</a> to distribute you open source C/C++ projects within the community! Registration for public open source projects is completely free, but we have premium accounts available for private projects too.</p>
+
+      Also you can <a href="ENLACE A CONTRIBUTE.md">contribute</a> to our project! Help us to make C/C++ dependency management [FRASE JORDI CHUPIGUAY AQUÍ]
+
       <div class="center"><a href="https://www.biicode.com/" target="_blank" class="btn">More info in biicode.com</a></div>
-
-
-      <!--pre><code>$ git clone https://github.com/biicode/biicode.git
-$ cd biicode
-$ # install requirement with pip</code></pre-->
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://biicode.com/biicode/biicode">biicode</a> is maintained by <a href="https://github.com/biicode">biicode</a>.</span>
