@@ -60,7 +60,7 @@ a {
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #ffffff;
-  background-image: url("letrasabeja.png");
+  background-image: url("https://raw.githubusercontent.com/biicode/biicode/gh-pages/letrasabeja.png");
   background-size: auto 100%; }
 
 @media screen and (min-width: 64em) {
