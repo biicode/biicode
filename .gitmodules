@@ -1,0 +1,9 @@
+[submodule "client"]
+	path = client
+	url = git@github.com:biicode/client.git
+[submodule "common"]
+	path = common
+	url = git@github.com:biicode/common.git
+[submodule "bii-server"]
+	path = bii-server
+	url = git@github.com:biicode/bii-server.git
